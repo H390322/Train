@@ -26,3 +26,4 @@ if classifier == 'SVM':
   svm.fit(x_train, y_train)
   y_pred = svm.predict(x_test)
   accuracy_score(y_test, y_pred)
+  st.write(acc)
