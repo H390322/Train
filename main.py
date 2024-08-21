@@ -5,6 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 df = sns.load_dataset('iris')
 df
@@ -34,3 +35,11 @@ if classifier == 'DecisionTree':
   y_pred = dt.predict(x_test)
   acc=accuracy_score(y_test, y_pred)
   st.write(acc)
+if classifier == 'RandomForestClassifier':
+  dt = RandomForestClassifier()
+  dt.fit(x_train, y_train)
+  y_pred = dt.predict(x_test)
+  acc=accuracy_score(y_test, y_pred)
+  st.write(acc)
+
+
