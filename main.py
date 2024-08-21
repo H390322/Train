@@ -36,8 +36,8 @@ if classifier == 'DecisionTree':
   acc=accuracy_score(y_test, y_pred)
   st.write(acc)
 if classifier == 'RandomForestClassifier':
-  dt = RandomForestClassifier()
-  dt.fit(x_train, y_train)
+  rf = RandomForestClassifier()
+  rf.fit(x_train, y_train)
   y_pred = dt.predict(x_test)
   acc=accuracy_score(y_test, y_pred)
   st.write(acc)
